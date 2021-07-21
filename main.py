@@ -1,1 +1,8 @@
-print('FastAPI begins')
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get('/')
+async def root():
+    return {'message': 'apple'}
